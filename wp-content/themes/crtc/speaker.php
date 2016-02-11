@@ -19,10 +19,17 @@ get_header(); ?>
 		<div class="col-sm-12">
 		<?php
 		// Start the loop.
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) : the_post();?>
 
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
+		
+		
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php twentysixteen_post_thumbnail(); ?>
+    	<p><em><?php the_field("title");?></em></p>
+    	<p><?php the_field("about");?></p>
+		
+			<div class="entry-content">
+				<?php the_content();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 		

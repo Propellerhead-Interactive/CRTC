@@ -48,7 +48,7 @@ get_header(); ?>
    
         
         </p>
-        <br /><br />
+        <a name="blog"/>
         <div class="row">
         <?php
 						
@@ -59,11 +59,11 @@ get_header(); ?>
               'showposts'=>6,
               'paged' => $paged
             );
-            $my_query = new WP_Query($args);
+            $wp_query = new WP_Query($args);
 						
          ?>
-          <?php if( $my_query->have_posts() ) {
-             while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+          <?php if( $wp_query->have_posts() ) {
+             while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
                 <div class="col-md-4">
                   <div <?php post_class( 'index-item' ); ?>>
 
@@ -84,7 +84,8 @@ get_header(); ?>
                 </div>
                <?php
               endwhile;
-						 wpbeginner_numeric_posts_nav(); 
+							
+						
   
             } //if ($my_query)
          // Restore global post data stomped by the_post().
@@ -93,6 +94,12 @@ get_header(); ?>
 
 
      </div>
+		  <?php wpbeginner_numeric_posts_nav($wp_query);  wp_reset_query();
+	
+			
+			?>
+			
+			
      
   </div>
   </div>

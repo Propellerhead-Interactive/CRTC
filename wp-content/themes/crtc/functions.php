@@ -409,19 +409,17 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 
-function wpbeginner_numeric_posts_nav() {
+function wpbeginner_numeric_posts_nav($wp_query) {
 
 	if( is_singular() )
 		return;
-
-	global $wp_query;
-
 	/** Stop execution if there's only 1 page */
 	if( $wp_query->max_num_pages <= 1 )
 		return;
 
 	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 	$max   = intval( $wp_query->max_num_pages );
+	
 
 	/**	Add current page to the array */
 	if ( $paged >= 1 )
@@ -448,7 +446,7 @@ function wpbeginner_numeric_posts_nav() {
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active"' : '';
 
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		if ( ! in_array( 2, $links ) )
 			echo '<li>…</li>';
@@ -458,7 +456,7 @@ function wpbeginner_numeric_posts_nav() {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
 	}
 
 	/**	Link to last page, plus ellipses if necessary */
@@ -467,7 +465,7 @@ function wpbeginner_numeric_posts_nav() {
 			echo '<li>…</li>' . "\n";
 
 		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
 	}
 
 	/**	Next Post Link */

@@ -90,15 +90,18 @@ get_header(); ?>
             } //if ($my_query)
          // Restore global post data stomped by the_post().
 
-        ?>
-
+        ?> 
+		 
+			
 
      </div>
-		  <?php wpbeginner_numeric_posts_nav($wp_query);  wp_reset_query();
+		<br>
+		  <?php wpbeginner_numeric_posts_nav($wp_query); 
+			
+			 wp_reset_query();
 	
 			
 			?>
-			
 			
      
   </div>

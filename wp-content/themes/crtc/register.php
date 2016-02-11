@@ -14,9 +14,10 @@
  */
 
 get_header(); ?>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
@@ -25,19 +26,39 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'page' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+		
 
 			// End of the loop.
 		endwhile;
 		?>
+			</div>
+		</div>
+		<form>
+		<div class="row">
+			<div class="col-sm-6">
+				<input type="text" class="form-control" placeholder="YOUR NAME*">
+				<br>
+				<input type="text" class="form-control" placeholder="JOB TITLE*">
+				<br>
+				<input type="text" class="form-control" placeholder="PHONE NUMBER*">
+				<br>
+				<input type="text" class="form-control" placeholder="FOOD RESTRICTIONS*">
+				<br>
+				<h3>SOCiAL MEDIA ACCOUNTS</h3>
+				<input type="text" class="form-control" placeholder="FACEBOOK">
+			</div>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" placeholder="COMPANY NAME*">
+				<br>
+				<input type="text" class="form-control" placeholder="EMAIL ADDRESS*">
+				<br>
+				<input type="submit" class="btn btn-primary" >
+				<br>
+				
+				
+			</div>
+		</div>
+		<form>
 
-	</main><!-- .site-main -->
-
-	<?php get_sidebar( 'content-bottom' ); ?>
-
-</div><!-- .content-area -->
-
-<?php get_sidebar(); ?>
+	</div>
 <?php get_footer(); ?>

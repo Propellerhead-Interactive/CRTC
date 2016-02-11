@@ -23,29 +23,13 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'page' );
 		endwhile;
 		?>
-		<a href="#" class="btn btn-default">APPLY HERE</a> <a href="#" class="btn btn-default">WATCH VIDEO</a>
+		<a href="<?php the_field("application_form_url");?>" class="btn btn-default">APPLY HERE</a> <a target="_blank" href="https://youtu.be/OEegBZNU7Jk" class="btn btn-default">WATCH VIDEO</a>
 		</div>
 	</div>
 	
 	<hr>
 	
-	<div class="row">
-		<div class="col-sm-8">
-			
-		<h1>What does #discoverability mean to you?</h1>
-		
-		<?php echo do_shortcode("[instagram-feed]");?>
-		
-	</div>
-		<div class="col-sm-4">
-			
-			<a class="twitter-timeline" href="https://twitter.com/hashtag/discoverability" data-widget-id="658720264046252036">#discoverability Tweets</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			
-			
-			
-		</div>
-	</div>
+	<?php include("_social_block.php");?>
 	<hr>
 	<!-- end Seciotn 2-->
 	<!-- SPEAKERS : MODERATOR/KEYNOTE -->
@@ -169,16 +153,7 @@ get_header(); ?>
 	
 	<!-- end schedule-->
 	
-	<hr>
-	<div class="row">
-		<div class="col-sm-12 text-center">
-			<h2>Sign up for our newsletter</h2>
-			<form>
-				<input type="text" placeholder="email address"/><input type="submit">
-			</form>
-		</div>
 
-	</div>
 	
 	
 </div><!-- .content-area -->

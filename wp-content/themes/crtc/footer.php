@@ -1,3 +1,5 @@
+<?php /* Template Name: Speaker page */ ?>
+
 <?php
 /**
  * The template for displaying the footer
@@ -53,7 +55,7 @@
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

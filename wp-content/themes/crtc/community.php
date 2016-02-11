@@ -1,3 +1,5 @@
+<?php /* Template Name: Community Page */ ?>
+
 <?php
 /**
  * The template for displaying pages

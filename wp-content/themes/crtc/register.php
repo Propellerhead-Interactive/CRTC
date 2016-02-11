@@ -1,3 +1,5 @@
+<?php /* Template Name: Registration Form */ ?>
+
 <?php
 /**
  * The template for displaying pages

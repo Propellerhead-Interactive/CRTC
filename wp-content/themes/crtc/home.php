@@ -16,20 +16,14 @@
 get_header(); ?>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-6 text-center">
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
-
-			// Include the page content template.
 			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			
-
-			// End of the loop.
 		endwhile;
 		?>
+		<a href="#" class="btn btn-default">APPLY HERE</a> <a href="#" class="btn btn-default">WATCH VIDEO</a>
 		</div>
 	</div>
 	
@@ -63,6 +57,7 @@ get_header(); ?>
 					setup_postdata( $post ); 
 					?>
 				    <div>
+							<?php the_post_thumbnail(array(150, 150));?>
 				    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				    	<p><?php the_content(); ?></p>
 							<a href="<?php the_permalink(); ?>">View more about this speaker</a>
@@ -96,6 +91,7 @@ get_header(); ?>
 		    <div class="col-md-3 col-sm-6 mini">
 		      <div class="featurette text-center">
 		        <div class="featurette-text">
+							<?php the_post_thumbnail(array(100, 100));?>
 		          <h5><?php the_title();?></h5>
 		          
 		          <p><em><?php the_field("title");?></em></p>

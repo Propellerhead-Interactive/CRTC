@@ -1,4 +1,3 @@
-<?php /* Template Name: Speaker page */ ?>
 
 <?php
 /**
@@ -15,7 +14,8 @@
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+			Somewhere down here a footer menu goess.....
+			<?php if ( has_nav_menu( 'xxxprimary' ) ) : ?>
 				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Primary Menu', 'twentysixteen' ); ?>">
 					<?php
 						wp_nav_menu( array(

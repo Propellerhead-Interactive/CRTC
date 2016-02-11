@@ -11,7 +11,7 @@
  *
  * @package WordPress
  * @subpackage CRTC
- * @since CRTC 1.0
+ * @since CRTC 2.0
  */
 
 get_header(); ?>

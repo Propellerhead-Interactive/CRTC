@@ -6,8 +6,8 @@
  * and the comment form.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage CRTC
+ * @since CRTC 2.0
  */
 
 /*

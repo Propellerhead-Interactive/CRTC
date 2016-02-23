@@ -40,4 +40,6 @@ get_header(); ?>
 	</div>
 </div>
 </div>
+<?php include("newsletter.php");?>
+
 	<?php get_footer(); ?>

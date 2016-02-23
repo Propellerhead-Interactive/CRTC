@@ -34,6 +34,7 @@ get_header(); ?>
 </div>
 	
 
+<?php include("_newsletter.php");?>
 
 
 <?php get_footer(); ?>

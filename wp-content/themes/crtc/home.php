@@ -26,10 +26,6 @@ get_header(); ?>
 		<a href="<?php the_field("application_form_url");?>" class="btn btn-default">APPLY HERE</a> <a target="_blank" href="https://youtu.be/OEegBZNU7Jk" class="btn btn-default">WATCH VIDEO</a>
 		</div>
 	</div>
-	
-	<hr>
-	
-	<?php include("_social_block.php");?>
 	<hr>
 	<!-- end Seciotn 2-->
 	<!-- SPEAKERS : MODERATOR/KEYNOTE -->
@@ -39,8 +35,13 @@ get_header(); ?>
 	<hr>
 	<!-- loop through all the speakers here just like in Presto with the cards -->
 	<?php include("_all_speakers.php");?>
+	<hr>
+	
+	<?php include("_social_block.php");?>
+	
 	
 	<hr>
+	
 	
 
 	<!-- End speakers-->
@@ -49,9 +50,41 @@ get_header(); ?>
 
 	<?php include("_session_schedule.php");?>
 	
+	<hr>
 	<!-- end schedule-->
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<h3>* EDITOR'S PICK</h3>
+				<div style="min-height:300px;border-radius:30px;border:solid 1px #ccc;">
+				<?php $post = get_field("featured_post"); ?>
+					<?php
+						
+					global $post;
+					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post'); 
+					
+					?>
+					
+					<img style="width:100%" src="<?php echo $thumb[0];?>"/>
+					
+						<div style="padding:10px">
+						<?php echo $post->post_date;  ?>
+						<h4><A href="<?php echo get_permalink($post);  ?>"><?php echo $post->post_title;  ?></a></h4>
+			
+							<?php echo $post->post_excerpt;  ?>
+						</div>
+				</div>
+		</div>
+		<div class="col-sm-6 text-center">
+				<h3>RECENT POSTS</h3>
+				<div class="text-left">
+					
+					<?php echo do_shortcode('[rpwe limit="3"]');?>
+				</div>
+		</div>
+	</div>
+		
+<hr>
 	
-
 	
 	
 </div><!-- .content-area -->

@@ -69,7 +69,7 @@ function twentysixteen_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array("page", "post", "speaker") );
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
@@ -483,6 +483,21 @@ function cc_hide_admin_bar() {
   if (!current_user_can('edit_posts')) {
     show_admin_bar(false);
   }
+}
+
+add_action( 'init', 'create_post_type' );
+add_post_type_support( 'speaker', 'thumbnail' );    
+function create_post_type() {
+  register_post_type( 'speaker',
+    array(
+      'labels' => array(
+        'name' => __( 'Speaker' ),
+        'singular_name' => __( 'Speaker' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+    )
+  );
 }
 
 

@@ -1,5 +1,3 @@
-<?php /* Template Name: Speaker page */ ?>
-
 <?php
 /**
  * The template for displaying pages
@@ -30,11 +28,6 @@ get_header(); ?>
 		
 			<div class="entry-content">
 				<?php the_content();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-		
-
-			// End of the loop.
 		endwhile;
 		?>
 	</div>

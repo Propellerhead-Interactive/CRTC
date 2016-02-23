@@ -20,7 +20,7 @@ get_header(); ?>
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'other' );
 		endwhile;
 		?>
 		<a href="<?php the_field("application_form_url");?>" class="btn btn-default">APPLY HERE</a> <a target="_blank" href="https://youtu.be/OEegBZNU7Jk" class="btn btn-default">WATCH VIDEO</a>

@@ -67,7 +67,7 @@ get_header(); ?>
 					<img style="width:100%" src="<?php echo $thumb[0];?>"/>
 					
 						<div style="padding:10px">
-						<?php echo $post->post_date;  ?>
+						<?php echo mysql2date('j M Y',$post->post_date);  ?>
 						<h4><A href="<?php echo get_permalink($post);  ?>"><?php echo $post->post_title;  ?></a></h4>
 			
 							<?php echo $post->post_excerpt;  ?>
@@ -78,7 +78,21 @@ get_header(); ?>
 				<h3>RECENT POSTS</h3>
 				<div class="text-left">
 					
-					<?php echo do_shortcode('[rpwe limit="3"]');?>
+					
+				<?php 
+				$args = array( 'numberposts' => '3' );
+					$recent_posts = wp_get_recent_posts( $args );
+					foreach( $recent_posts as $recent ){
+						echo mysql2date('j M Y', $recent["post_date"]);
+							
+							
+						echo "<br>";
+						echo '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> <br> ';
+						echo '<a href="' . get_permalink($recent["ID"]) . '" class="btn btn-default brn-red">READ MORE</a> <br> ';
+							echo "<br>";
+					}
+				
+				?>
 				</div>
 		</div>
 	</div>

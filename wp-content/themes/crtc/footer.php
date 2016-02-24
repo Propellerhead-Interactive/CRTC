@@ -11,54 +11,54 @@
  */
 ?>
 
-	
-	
-
-		</div><!-- .site-content -->
-
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			Somewhere down here a footer menu goess.....
-			<?php if ( has_nav_menu( 'xxxprimary' ) ) : ?>
-				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Primary Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'menu_class'     => 'primary-menu',
-						 ) );
-					?>
-				</nav><!-- .main-navigation -->
-			<?php endif; ?>
-
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>',
-						) );
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif; ?>
-
-			<div class="site-info">
-				<?php
-					/**
-					 * Fires before the twentysixteen footer text for footer customization.
-					 *
-					 * @since Twenty Sixteen 1.0
-					 */
-					do_action( 'twentysixteen_credits' );
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- .site-footer -->
-	</div><!-- .site-inner -->
-</div><!-- .site -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<?php wp_footer(); ?>
-</body>
+    <div class="section __black footer">
+      <svg viewBox="0 0 100 10" class="svg-top">
+        <polygon points="0,0 100,0 100,10" class="__white"></polygon>
+      </svg>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <nav>
+              <?php
+								wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'menu'              => 'Footer',
+		              'depth'             => 1,
+		              'container'         => '',
+		              'container_id' 			=> '',
+		              'container_class'   => '',
+		              'menu_class'        => 'nav nav-justified',
+		              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+		              'walker'            => new wp_bootstrap_navwalker()
+								 ) );
+							?>
+            </nav>
+          </div>
+          <div class="col-xs-12">
+            <nav>
+              <?php
+								wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'menu'              => 'Logos',
+		              'depth'             => 1,
+		              'container'         => '',
+		              'container_id' 			=> '',
+		              'container_class'   => '',
+		              'menu_class'        => 'nav nav-justified',
+		              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+		              'walker'            => new wp_bootstrap_navwalker()
+								 ) );
+							?>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/build/production.js"></script>
+		<?php wp_footer(); ?>
+	</body>
 </html>

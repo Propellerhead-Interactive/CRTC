@@ -500,4 +500,5 @@ function create_post_type() {
   );
 }
 
+require_once('wp_bootstrap_navwalker.php');
 

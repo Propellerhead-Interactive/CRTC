@@ -11,9 +11,9 @@
  */
 ?>
 
-    <div class="section __black footer">
+    <div class="section __black footer" id="slant-footer">
       <svg viewBox="0 0 100 10" class="svg-top">
-        <polygon points="0,0 100,0 100,10" class="__white"></polygon>
+        <polygon points="0,0 100,0 100,10"></polygon>
       </svg>
       <div class="container">
         <div class="row">

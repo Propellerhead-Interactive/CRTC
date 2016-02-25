@@ -9,6 +9,7 @@ module.exports = function(grunt) {
                     'js/libs/jquery.min.js',
                     'js/libs/bs3.js',
                     'js/libs/ie10-viewport-bug-workaround.js',
+                    'js/libs/final-countdown.min.js',
                     'js/app.js'
                 ],
                 dest: 'js/build/production.js'

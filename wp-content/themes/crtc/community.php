@@ -14,110 +14,98 @@
  */
 
 get_header(); ?>
-	<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
- wp_reset_query();
-		endwhile;
-		?>
-	</div>
-</div>
-<hr>
-	<div class="row">
-		<div class="col-sm-12">
-				<?php the_field("section_2")?>
-			
-	</div>
+ <div class="hero" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>')">
+  <div class="nodes"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <?php the_field('hero_content'); ?>
+      </div>
+    </div>
+  </div>
+  <svg viewBox="0 0 100 10" class="svg-bottom">
+    <polygon points="0,0 0,10 100,10" class="__gray"></polygon>
+    <polygon points="-1,-0.1 -1,7 40,4" class="__green"></polygon>
+  </svg>
 </div>
 
-<hr>
-<!-- -->
+<div class="section __gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <?php the_field("section_2")?>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
 
-
-
-  <div class="row">
-    <div class="col-md-12 index-page-content-main">
-
-   
-        
-        </p>
-        <a name="blog"/>
-        <div class="row">
         <?php
-						
-				
-            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-            $args=array(
-              'post_type' => 'post',
-              'showposts'=>6,
-              'paged' => $paged
-            );
-            $wp_query = new WP_Query($args);
-						
-         ?>
-          <?php if( $wp_query->have_posts() ) {
-             while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-                <div class="col-md-4">
-                  <div <?php post_class( 'index-item' ); ?>>
-
-                      <div class="index-img">
-                      <?php if ( has_post_thumbnail() ) {
-                        the_post_thumbnail( 'medium' );
-                      } ?>
-                      </div>
-                      <div class="index-content">
-                      <h3 class="medium"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-                      <span class="index-date"><?php the_time( get_option( 'date_format' ) ); ?></span>
-                      
-                      <p class="index-excerpt"><?php the_excerpt(); ?></p>
-                      <span class="editors"><i class="fa fa-star"></i> <?php echo  _e('Editor\'s Pick', 'theme-text-domain'); ?></span>
-
-                    </div>
+          
+      
+          $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+          $args=array(
+            'post_type' => 'post',
+            'showposts'=>6,
+            'paged' => $paged
+          );
+          $wp_query = new WP_Query($args);
+          
+       ?>
+        <?php if( $wp_query->have_posts() ) {
+          $i = 1;
+           while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium');"></div>
+                  <div class="card-content">
+                    <p class="small"><?php the_time( get_option( 'date_format' ) ); ?></p>
+                    <p class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                    <p class="post-excerpt"><?php the_excerpt(); ?></p>
                   </div>
                 </div>
-               <?php
-              endwhile;
-							
-						
-  
-            } //if ($my_query)
-         // Restore global post data stomped by the_post().
+              </div>
+              <?php
+              if($i == 3 || $i == 6 ){
+                echo '</div><div class="row">';
+              } ?>
+         <?php
+            $i++;
+            endwhile;
+          }
+      ?> 
 
-        ?> 
-		 
-			
+     <?php wpbeginner_numeric_posts_nav($wp_query); 
+    
+     wp_reset_query();
 
-     </div>
-		<br>
-		  <?php wpbeginner_numeric_posts_nav($wp_query); 
-			
-			 wp_reset_query();
-	
-			
-			?>
-			
-     
+    ?>
+    </div>
   </div>
-  </div>
-
-<!-- -->
-
-	<hr>
-	
-	<?php include("_social_block.php");?>
-	<hr>
-
-
-
 </div>
+<div class="section __green">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="0,0 100,0 0,10" class="__gray"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <?php include("_social_block.php");?>
+    </div>
+  </div>
+</div>  
 
-<?php include("_newsletter.php");?>
+<div class="section __white blog-posts">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="100,0 100,7 50,0" class="__teal"></polygon>
+    <polygon points="-1,0 100,-0.02 -1,10" class="__green"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <?php include("_newsletter.php");?>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>

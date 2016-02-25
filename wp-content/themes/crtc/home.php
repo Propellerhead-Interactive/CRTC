@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<div class="hero" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>')">
+<div class="hero front-page" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>')">
   <div class="nodes"></div>
   <div class="container">
     <div class="row">
@@ -26,7 +26,6 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', 'other' );
 					endwhile;
 					?>
-					<a href="<?php the_field("application_form_url");?>" class="btn btn-default">APPLY HERE</a> <a target="_blank" href="https://youtu.be/OEegBZNU7Jk" class="btn btn-default">WATCH VIDEO</a>
       </div>
     </div>
   </div>

@@ -440,13 +440,13 @@ function wpbeginner_numeric_posts_nav($wp_query) {
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link( __('Previous')) );
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link( __('PREVIOUS')) );
 
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active"' : '';
 
-		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+		printf( '<li%s><a class="btn btn-default btn-pink btn-pink-inverse" href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		if ( ! in_array( 2, $links ) )
 			echo '<li>…</li>';
@@ -456,7 +456,7 @@ function wpbeginner_numeric_posts_nav($wp_query) {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		printf( '<li%s><a class="btn btn-default btn-pink btn-pink-inverse" href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
 	}
 
 	/**	Link to last page, plus ellipses if necessary */
@@ -465,12 +465,12 @@ function wpbeginner_numeric_posts_nav($wp_query) {
 			echo '<li>…</li>' . "\n";
 
 		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+		printf( '<li%s><a class="btn btn-default btn-pink btn-pink-inverse" href="%s#blog">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
 	}
 
 	/**	Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link( __('Next'))  );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link( __('NEXT'))  );
 
 	echo '</ul></div>' . "\n";
 
@@ -498,6 +498,26 @@ function create_post_type() {
       'has_archive' => false,
     )
   );
+}
+
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+  global $post;
+	return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> Read More</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+/* Change Excerpt length */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="btn btn-default btn-pink btn-pink-inverse"';
 }
 
 require_once('wp_bootstrap_navwalker.php');

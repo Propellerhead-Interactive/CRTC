@@ -2,7 +2,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.roboto-condensed, h1, h2, h3, h4, h5, h6, .section .speaker-name {
+.roboto-condensed, h1, h2, h3, h4, h5, h6, .section .speaker-name, form.register-form .form-control, #countdown-to-event > div .h1, .control {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -30,7 +30,7 @@ a:hover {
 }
 
 .btn {
-  border-radius: 0;
+  border-radius: 0 !important;
   font-size: 12px;
   padding: 6px 24px;
   letter-spacing: 0.25em;
@@ -71,6 +71,11 @@ a:hover {
 .btn.btn-default.btn-pink.btn-pink-inverse:hover {
   color: #FFF;
   background-color: #d81c5c;
+}
+
+.active .btn.btn-default.btn-pink.btn-pink-inverse {
+  background-color: #d81c5c;
+  color: #FFF;
 }
 
 .form-control {
@@ -121,6 +126,24 @@ a:hover {
   position: relative;
   padding-bottom: 200px;
   padding-top: 100px;
+  height: 680px;
+  color: #FFF;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.hero .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.hero.mini-hero {
+  height: 500px !important;
+}
+.hero.mini-hero h1 {
+  text-transform: uppercase;
 }
 .hero .nodes {
   opacity: 0.05;
@@ -135,9 +158,12 @@ a:hover {
   animation-name: pulse;
   animation-iteration-count: infinite;
 }
+.hero.front-page h1 {
+  color: #97c93c;
+}
 .hero h1 {
   margin-top: 0;
-  color: #97c93c;
+  color: #FFF;
   font-size: 52px;
   letter-spacing: 0.05em;
 }
@@ -161,6 +187,10 @@ a:hover {
 .section.main-speakers .speaker-name {
   font-size: 24px;
 }
+.section.main-speakers .speaker-name a {
+  color: #000;
+  text-transform: uppercase;
+}
 .section.main-speakers img {
   max-height: 265px;
   border: 6px solid #d81c5c;
@@ -176,6 +206,10 @@ a:hover {
 }
 .section.the-experts .speaker-name {
   font-size: 20px;
+  text-transform: uppercase;
+}
+.section.the-experts .speaker-name a {
+  color: #000;
 }
 .section.the-experts img {
   max-height: 200px;
@@ -250,6 +284,7 @@ a:hover {
   margin-bottom: 30px;
 }
 .section .card {
+  background-color: #FFF;
   border-radius: 10px;
   box-shadow: 0 0 1em #adadad;
   margin-bottom: 30px;
@@ -268,7 +303,9 @@ a:hover {
   color: #d81c5c;
   font-weight: bold;
 }
-.section .card .card-content .post-title {
+.section .card .card-content .post-title a {
+  color: #000;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
 }
@@ -341,70 +378,342 @@ a:hover {
   color: #FFF !important;
 }
 
-/* jQuery Countdown styles 2.0.0. */
-.is-countdown {
-  margin-left: 20px;
+form.register-form div.checkbox, form.register-form div.radio {
+  margin-top: 0;
 }
-
-.countdown-rtl {
-  direction: rtl;
-}
-
-.countdown-holding span {
-  color: #888;
-}
-
-.countdown-row {
-  clear: both;
-  width: 100%;
-  padding: 0px 2px;
-  text-align: center;
-}
-
-.countdown-show1 .countdown-section {
-  width: 98%;
-}
-
-.countdown-show2 .countdown-section {
-  width: 48%;
-}
-
-.countdown-show3 .countdown-section {
-  width: 32.5%;
-}
-
-.countdown-show4 .countdown-section {
-  width: 24.5%;
-}
-
-.countdown-show5 .countdown-section {
-  width: 19.5%;
-}
-
-.countdown-show6 .countdown-section {
-  width: 16.25%;
-}
-
-.countdown-show7 .countdown-section {
-  width: 14%;
-}
-
-.countdown-section {
-  display: block;
-  float: left;
-  text-align: center;
-}
-
-.countdown-period {
-  display: block;
-  font-size: 12px;
+form.register-form .form-control {
+  padding-left: 0;
+  letter-spacing: 0.1em;
+  border: 0 none;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+  box-shadow: none;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: #000;
+  margin-bottom: 30px;
+}
+form.register-form ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #FFF;
+}
+form.register-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #FFF;
+}
+form.register-form :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #FFF;
+}
+form.register-form :-moz-placeholder {
+  /* Firefox 18- */
+  color: #FFF;
 }
 
-.countdown-descr {
+.__placeholder-pink::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #d81c5c;
+}
+.__placeholder-pink::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d81c5c;
+}
+.__placeholder-pink:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #d81c5c;
+}
+.__placeholder-pink:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d81c5c;
+}
+
+#countdown-to-event {
+  margin-bottom: 30px;
+}
+#countdown-to-event > div {
+  display: inline-block;
+}
+#countdown-to-event > div:first-child {
+  margin-right: 40px;
+}
+#countdown-to-event > div .h1 {
+  font-size: 72px;
+  margin-bottom: 0;
+}
+
+/*
+ * WTF, forms?
+ * Released under MIT and copyright 2014 Mark Otto.
+ * http://wtfforms.com
+ *
+ * Embedded icons from Open Iconic.
+ * Released under MIT and copyright 2014 Waybury.
+ * http://useiconic.com/open
+ */
+/*
+ * Checkboxes and radios
+ */
+.control {
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5rem;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.control input:not(.form-control) {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /* Put the input behind the label so it doesn't overlay text */
+}
+.control input.form-control {
+  margin-top: -5px;
+}
+
+.control-indicator {
+  position: absolute;
+  top: .25rem;
+  left: 0;
   display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1rem;
+  font-size: 65%;
+  color: #FFF;
+  text-align: center;
+  background-color: transparent;
+  background-size: 75% 75%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.control:hover .control-indicator {
+  color: #fff;
+  background-color: #ccc;
+}
+*/
+/* Focus */
+.control input:focus ~ .control-indicator {
+  box-shadow: 0;
+}
+
+/* Checked state */
+.control input:checked ~ .control-indicator {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Active */
+.control input:active ~ .control-indicator {
+  color: #fff;
+  background-color: #84c6ff;
+}
+
+/* Checkbox modifiers */
+.checkbox .control-indicator {
+  border-radius: 0;
+  border: 1px solid #FFF;
+}
+
+.checkbox input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+.checkbox label {
+  padding-left: 25px;
+}
+
+/* Radio modifiers */
+.radio .control-indicator {
+  border-radius: 50%;
+  border: 1px solid #FFF;
+}
+
+.radio input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+/* Alternately, use another character */
+.control-x input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjQsMEwwLDEuNGwwLjcsMC43bDEuOCwxLjhMMC43LDUuN0wwLDYuNGwxLjQsMS40bDAuNy0wLjdsMS44LTEuOGwxLjgsMS44bDAuNywwLjdsMS40LTEuNEw3LjEsNS43DQoJTDUuMywzLjlsMS44LTEuOGwwLjctMC43TDYuNCwwTDUuNywwLjdMMy45LDIuNUwyLjEsMC43QzIuMSwwLjcsMS40LDAsMS40LDB6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+.control-dash input:checked ~ .control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K);
+}
+
+/*
+ * Select
+ */
+.select {
+  position: relative;
+  display: inline-block;
+  color: #555;
+}
+
+.select select {
+  display: inline-block;
   width: 100%;
+  margin: 0;
+  padding: .5rem 2.25rem .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 0;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Undo the Firefox inner focus ring */
+.select select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* Dropdown arrow */
+.select:after {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -.15rem;
+  pointer-events: none;
+  border-top: .35rem solid;
+  border-right: .35rem solid transparent;
+  border-bottom: .35rem solid transparent;
+  border-left: .35rem solid transparent;
+}
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.select select:hover {
+  background-color: #ddd;
+}
+*/
+/* Focus */
+.select select:focus {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+/* Active/open */
+.select select:active {
+  color: #fff;
+  background-color: #0074d9;
+}
+
+/* Hide the arrow in IE10 and up */
+.select select::-ms-expand {
+  display: none;
+}
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .select select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .select option {
+    background-color: #fff;
+  }
+}
+/* IE9 hack to hide the arrow */
+@media screen and (min-width: 0\0) {
+  .select select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+
+  .select:after {
+    z-index: 5;
+  }
+
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: #eee;
+  }
+
+  .select select:hover,
+  .select select:focus,
+  .select select:active {
+    color: #555;
+    background-color: #eee;
+  }
+}
+/* IE9 hacks to accompany custom markup. We don't need to scope this via media queries, but I feel better doing it anyway. */
+@media screen and (min-width: 0\0) {
+  .progress {
+    background-color: #eee;
+    border-radius: .2rem;
+  }
+
+  .progress-bar {
+    display: inline-block;
+    height: 1rem;
+    text-indent: -999rem;
+    /* Simulate hiding of value as in native `<progress>` */
+    background-color: #0074d9;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+  }
+
+  .progress[width="100%"] {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+  }
+}
+/*
+ * Control layouts
+ */
+.controls-stacked {
+  margin: 1rem 0;
+}
+
+.controls-stacked .control,
+.controls-stacked .progress {
+  display: block;
+}
+
+.controls-stacked .control + .control,
+.controls-stacked .progress + .progress {
+  margin-top: .5rem;
+}
+
+.controls-inline {
+  margin: 1rem 0;
+}
+
+.controls-inline .control {
+  display: inline-block;
+  height: 1rem;
+}
+
+.controls-inline .control + .control {
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=theme.css.map */

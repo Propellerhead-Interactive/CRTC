@@ -10,6 +10,7 @@
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+        <p class="muted"><?php the_field("title");?></p>
         <?php the_content(); ?>
         <p><a href="<?php the_permalink(); ?>">View more about this speaker</a></p>
       </div>
@@ -30,6 +31,7 @@
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+        <p class="muted"><?php the_field("title");?></p>
         <?php the_content(); ?>
         <p><a href="<?php the_permalink(); ?>">View more about this speaker</a></p>
       </div>

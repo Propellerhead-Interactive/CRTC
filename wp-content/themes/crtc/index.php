@@ -1,4 +1,4 @@
-<?php /* Template Name: Community Page */ ?>
+<?php /* Template Name: Index Page */ ?>
 
 <?php
 /**

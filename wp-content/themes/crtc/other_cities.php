@@ -14,64 +14,104 @@
  */
 
 get_header(); ?>
-<div class="container">
-	
-	
-	
-	
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-			
-			the_content();
-			
-		endwhile;
-		?>
-	
+<div class="hero" style="background-color: #d81c5c">
+  <div class="nodes"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+      	<?php the_field('hero_content'); ?>
 
-	
-		<hr>
-	<div class="row">
-		<div class="text-center">
-	
-	
-		<?php the_field("video_message");?>
-	
-		</div>
-	</div>
-	<hr>
-	<!-- end Seciotn 2-->
-	<!-- SPEAKERS : MODERATOR/KEYNOTE -->
+	<?php
+	// Start the loop.
+	while ( have_posts() ) : the_post();
+		
+		the_content();
+		
+	endwhile;
+	?>
 
-	
-	<?php include("_social_block.php");?>
-	
-	
-	<hr>
-	
-	<?php include("_headline_speakers.php");?>
-	
-	
-	<hr>
-	<!-- loop through all the speakers here just like in Presto with the cards -->
-	<?php include("_all_speakers.php");?>
-	<hr>
+      </div>
+    </div>
+  </div>
+  <svg viewBox="0 0 100 10" class="svg-bottom">
+    <polygon points="0,0 0,10 100,10" class="__white"></polygon>
+    <polygon points="-1,-0.1 -1,7 40,4" class="__green"></polygon>
+  </svg>
+</div>
 
-	<!-- End speakers-->
-	
-	<!-- begin Schedule - move me to content-->
+<div class="section __white">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <?php the_field("video_message");?>
+      </div>
+    </div>
+  </div>
+</div>
 
-	<?php include("_session_schedule.php");?>
-	
-	<hr>
+<div class="section __green">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="0,0 100,0 100,10" class="__white"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <?php include("_social_block.php");?>
+    </div>
+  </div>
+</div>	
 
+<!-- SPEAKERS : MODERATOR/KEYNOTE -->
+<div class="section __gray main-speakers">
+	<svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="100,0 100,7 50,0" class="__teal"></polygon>
+    <polygon points="-1,0 100,-0.02 -1,10" class="__green"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+    	<?php include("_headline_speakers.php");?>  
+    </div>
+  </div>
+</div>
 	
+<div class="section __white the-experts">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="0,0 100,0 100,10" class="__gray"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h1>THE EXPERTS</h1>
+      </div>
+    </div>
+    <div class="row">
+    	<?php include("_all_speakers.php");?>
+    </div>
+  </div>
+</div>
 	
-	
-</div><!-- .content-area -->
-
-<?php include("_newsletter.php");?>
-
+<div class="section __blue agenda">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="0,0 100,0 100,10" class="__white"></polygon>
+    <polygon points="100,5 100,10 50,10" class="__pink"></polygon>
+    <polygon points="0,0 0,11 100,10" class="__blue"></polygon>
+  </svg>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h1>AGENDA</h1>
+        <div class="day-toggle">
+          <a href="#" class="btn btn-default active">DAY ONE</a> 
+          <a href="#" class="btn btn-default">DAY TWO</a> 
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-12">
+    		<?php include("_session_schedule.php");?>
+    	</div>
+    </div>
+  </div>
+</div>	
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<?php /* Template Name: Registration Form */ ?>
+<?php /* Template Name: Sponsors Page */ ?>
 
 <?php
 /**
@@ -14,26 +14,12 @@
  */
 
 get_header(); ?>
-	<div class="hero" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>')">
+	<div class="hero" style="background-color: #97c93c">
 	  <div class="nodes"></div>
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-md-12 text-center">
-	      	<?php the_field('hero_content'); ?>
-	      </div>
-	    </div>
-	  </div>
-	  <svg viewBox="0 0 100 10" class="svg-bottom">
-	    <polygon points="0,0 0,10 100,10" class="__blue"></polygon>
-	    <polygon points="-1,-0.1 -1,7 40,4" class="__pink"></polygon>
-	  </svg>
-	</div>
-	<div class="section __blue agenda">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-
-					<?php
+	      	<?php
 					// Start the loop.
 					while ( have_posts() ) : the_post();
 
@@ -43,9 +29,22 @@ get_header(); ?>
 						// End of the loop.
 					endwhile;
 					?>
-				</div>
-			</div>
-
-		</div>
+	      	<?php the_field('hero_content'); ?>
+	      </div>
+	    </div>
+	  </div>
+	  <svg viewBox="0 0 100 10" class="svg-bottom">
+	    <polygon points="100,0 0,10 100,10" class="__white"></polygon>
+	  </svg>
 	</div>
+
+<div class="section __white blog-posts">
+  <div class="container">
+    <div class="row">
+	    <div class="col-sm-12 text-center">
+	    	<?php include("_newsletter.php");?>
+	    </div>
+	  </div>
+  </div>
+</div>
 <?php get_footer(); ?>

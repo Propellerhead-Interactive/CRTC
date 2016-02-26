@@ -12,29 +12,59 @@
  */
 
 get_header(); ?>
+
+<div class="hero mini-hero" style="background-color: #97c93c">
+  <div class="nodes"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+				<?php the_title( '<h1>', '</h1>' ); ?>        
+      </div>
+    </div>
+  </div>
+  <svg viewBox="0 0 100 10" class="svg-bottom">
+    <polygon points="0,5 0,10 50,10" class="__pink"></polygon>
+    <polygon points="100,0 0,10 100,10" class="__gray"></polygon>
+  </svg>
+</div>
+
+<div class="section __gray">
+
 	<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+		<div class="row">
+			<div class="col-sm-12">
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
 
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
+				// Include the page content template.
+				get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
 
-			// End of the loop.
-		endwhile;
-		?>
-	</div></div>
+				// End of the loop.
+			endwhile;
+			?>
+			</div>
+		</div>
+	</div>
 </div>
 	
-
-<?php include("_newsletter.php");?>
+<div class="section __white">
+  <svg viewBox="0 0 100 10" class="svg-top">
+    <polygon points="100,0 0,0 100,10" class="__gray"></polygon>
+  </svg>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<?php include("_newsletter.php");?>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <?php get_footer(); ?>

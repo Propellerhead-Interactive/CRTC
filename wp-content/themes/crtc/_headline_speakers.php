@@ -5,10 +5,10 @@
 				$post = $post_object;
 				setup_postdata( $post ); 
 		?>
-    <h3>MODERATOR</h3>
-    <p><?php the_post_thumbnail(array(265, 265));?></p>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
+        <h3>MODERATOR</h3>
+        <p><?php the_post_thumbnail(array(265, 265));?></p>
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
         <?php the_content(); ?>
@@ -26,10 +26,10 @@
 				$post = $post_object;
 				setup_postdata( $post ); 
 		?>
-    <h3>KEYNOTE SPEAKER</h3>
-    <p><?php the_post_thumbnail(array(265,265));?></p>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
+        <h3>KEYNOTE SPEAKER</h3>
+        <p><?php the_post_thumbnail(array(265,265));?></p>
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
         <?php the_content(); ?>

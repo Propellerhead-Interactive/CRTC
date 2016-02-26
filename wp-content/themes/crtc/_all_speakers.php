@@ -1,4 +1,3 @@
-	<div class="row">
 		<?php
 		
 			foreach (get_field('speakers') as $post) : setup_postdata($post); 
@@ -13,4 +12,3 @@
 		  <?php endforeach; 
 		
 		wp_reset_postdata();		?>
-	</div>

@@ -98,6 +98,14 @@ a:hover {
   background-color: #d81c5c;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-collapse {
+  border: 0 none;
+}
+
 .navbar {
   min-height: 130px;
   background-color: #FFF;
@@ -204,7 +212,7 @@ a:hover {
   position: relative;
 }
 .section > div {
-  padding: 50px 0;
+  padding: 50px auto;
 }
 .section.main-speakers .speaker-name {
   font-size: 24px;
@@ -776,6 +784,10 @@ form.register-form :-moz-placeholder {
     width: 70%;
     margin-top: 15px;
   }
+
+  h1, .hero h1, #countdown-to-event > div .h1 {
+    font-size: 45px;
+  }
 }
 @media (max-width: 991px) {
   .navbar-brand img {
@@ -783,11 +795,31 @@ form.register-form :-moz-placeholder {
     margin-top: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  h1, .hero h1, #countdown-to-event > div .h1 {
+    font-size: 35px;
+  }
+
+  #countdown-to-event > div:first-child {
+    display: block;
+    margin-right: 0;
+  }
+
   .navbar {
     min-height: 80px;
   }
 
+  .navbar-brand {
+    width: 80%;
+  }
+  .navbar-brand img {
+    width: auto;
+    max-height: 50px;
+    margin: 0;
+    display: inline;
+  }
+}
+@media (max-width: 399px) {
   .navbar-brand {
     width: 80%;
   }

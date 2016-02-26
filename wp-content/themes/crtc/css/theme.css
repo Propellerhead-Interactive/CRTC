@@ -716,4 +716,31 @@ form.register-form :-moz-placeholder {
   margin-left: 1rem;
 }
 
+@media (max-width: 1200px) {
+  .navbar-brand img {
+    width: 70%;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-brand img {
+    width: 42%;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 80px;
+  }
+
+  .navbar-brand {
+    width: 80%;
+  }
+  .navbar-brand img {
+    width: 100%;
+    margin: 0;
+    display: inline;
+  }
+}
+
 /*# sourceMappingURL=theme.css.map */

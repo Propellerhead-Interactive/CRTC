@@ -1758,11 +1758,22 @@ $(document)
 
 			  $(this).html("<div><p class='h1'>" + event.strftime('%D') + "</p><small>DAYS</small></div>" +
 			               "<div><p class='h1'>" + event.strftime('%H') + "</p><small>HOURS</small></div>" +
-			               "<div><p class='h1'> : </p><small>&nbsp;</small></div>" +
+			               "<div><p class='h1'> &nbsp;:&nbsp; </p><small>&nbsp;</small></div>" +
 			               "<div><p class='h1'>" + event.strftime('%M') + "</p><small>MINS</small></div>" +
-			               "<div><p class='h1'> : </p><small>&nbsp;</small></div>" +
+			               "<div><p class='h1'> &nbsp;:&nbsp; </p><small>&nbsp;</small></div>" +
 			               "<div><p class='h1'>" + event.strftime('%S') + "</p><small>SECS</small></div>"
 			    );
+			});
+		}
+
+		if($('.day-toggle')){
+			$('.day-toggle').on('click', 'a', function(e){
+				e.preventDefault();
+				$('.agenda-table').addClass('hide');
+				$($(this).data('target')).removeClass('hide');
+				$('.day-toggle a').removeClass('active');
+				$(this).addClass('active');
+
 			});
 		}
 	});

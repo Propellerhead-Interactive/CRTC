@@ -66,20 +66,7 @@ get_header(); ?>
     <polygon points="0,0 0,11 100,10" class="__blue"></polygon>
   </svg>
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <h1>AGENDA</h1>
-        <div class="day-toggle">
-          <a href="#" class="btn btn-default active">DAY ONE</a> 
-          <a href="#" class="btn btn-default">DAY TWO</a> 
-        </div>
-      </div>
-    </div>
-    <div class="row">
-    	<div class="col-sm-12">
-    		<?php include("_session_schedule.php");?>
-    	</div>
-    </div>
+    <?php include("_session_schedule.php");?>
   </div>
 </div>
 

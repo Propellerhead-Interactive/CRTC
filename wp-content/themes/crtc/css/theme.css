@@ -482,6 +482,8 @@ form.register-form :-moz-placeholder {
   font-size: 0;
   color: transparent;
   background-repeat: no-repeat !important;
+}
+.social-icon.social-pink {
   background-position: 5px 15px;
 }
 .social-icon.social-pink.social-twitter a {
@@ -493,13 +495,13 @@ form.register-form :-moz-placeholder {
 .social-icon.social-pink.social-instagram a {
   background-image: url("../img/ig-icon-pink.png");
 }
-.social-icon.social-white.social-twitter {
+.social-icon.social-white.social-twitter a {
   background-image: url("../img/twitter-icon-white.png");
 }
-.social-icon.social-white.social-youtube {
+.social-icon.social-white.social-youtube a {
   background-image: url("../img/yt-icon-white.png");
 }
-.social-icon.social-white.social-instagram {
+.social-icon.social-white.social-instagram a {
   background-image: url("../img/ig-icon-white.png");
 }
 

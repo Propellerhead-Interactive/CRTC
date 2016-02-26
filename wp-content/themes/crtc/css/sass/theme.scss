@@ -553,10 +553,10 @@ form.register-form {
     font-size: 0;
     color: transparent; 
     background-repeat: no-repeat !important;
-    background-position: 5px 15px;
 	}
 
 	&.social-pink {
+		background-position: 5px 15px;
 		&.social-twitter a{
 			background-image: url('../img/twitter-icon-pink.png');
 		}
@@ -569,13 +569,13 @@ form.register-form {
 	}
 
 	&.social-white {
-		&.social-twitter {
+		&.social-twitter a{
 			background-image: url('../img/twitter-icon-white.png');
 		}
-		&.social-youtube {
+		&.social-youtube a{
 			background-image: url('../img/yt-icon-white.png');			
 		}
-		&.social-instagram {
+		&.social-instagram a{
 			background-image: url('../img/ig-icon-white.png');			
 		}
 	}

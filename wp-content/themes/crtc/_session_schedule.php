@@ -32,7 +32,7 @@
 		  ?>
 		    		<tr>
               <td><?php echo the_sub_field('time_slot'); ?></td>
-              <td><img src="<?php echo the_sub_field('icon'); ?>"></td>
+              <td><?php if (get_sub_field('icon') != ""){ ?><img src="<?php echo the_sub_field('icon'); ?>"><?php } ?></td>
           		<td>
           			<div>
                   <ul class="nav nav-tabs nav-justified" role="tablist">

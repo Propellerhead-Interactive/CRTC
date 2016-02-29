@@ -44,9 +44,11 @@ get_header(); ?>
 </div>
 	
 <div class="section __white the-experts">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="0,0 100,0 100,10" class="__gray"></polygon>
-  </svg>
+  <div class="svg-container" style="width: 100%; position:relative;">
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+      <polygon points="0,0 200,0 200,10" class="__gray"></polygon>
+    </svg>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
@@ -60,10 +62,10 @@ get_header(); ?>
 </div>
 
 <div class="section __blue agenda">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="0,0 100,0 100,10" class="__white"></polygon>
-    <polygon points="100,5 100,10 50,10" class="__pink"></polygon>
-    <polygon points="0,0 0,11 100,10" class="__blue"></polygon>
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <polygon points="0,0 200,0 200,10" class="__white"></polygon>
+    <polygon points="200,5 200,10 100,10" class="__pink"></polygon>
+    <polygon points="0,0 0,11 200,10" class="__blue"></polygon>
   </svg>
   <div class="container">
     <?php include("_session_schedule.php");?>
@@ -71,8 +73,8 @@ get_header(); ?>
 </div>
 
 <div class="section __green">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="0,0 100,0 0,10" class="__blue"></polygon>
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <polygon points="0,0 200,0 0,10" class="__blue"></polygon>
   </svg>
   <div class="container">
     <div class="row">
@@ -82,9 +84,9 @@ get_header(); ?>
 </div>	
 	
 <div class="section __white blog-posts">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="0,0 50,0 0,5" class="__teal"></polygon>
-    <polygon points="-1,0 100,-1 100,10" class="__green"></polygon>
+  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <polygon points="0,0 100,0 0,5" class="__teal"></polygon>
+    <polygon points="-1,0 200,-1 200,10" class="__green"></polygon>
   </svg>
   <div class="container">
     <div class="row">

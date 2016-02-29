@@ -12,8 +12,8 @@
 ?>
 
     <div class="section __black footer" id="slant-footer">
-      <svg viewBox="0 0 100 10" class="svg-top">
-        <polygon points="0,0 100,0 100,10"></polygon>
+    	<svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+        <polygon points="0,0 200,0 200,10"></polygon>
       </svg>
       <div class="container">
         <div class="row">

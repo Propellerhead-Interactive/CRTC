@@ -44,11 +44,9 @@ get_header(); ?>
 </div>
 	
 <div class="section __white the-experts">
-  <div class="svg-container" style="width: 100%; position:relative;">
-    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
-      <polygon points="0,0 200,0 200,10" class="__gray"></polygon>
-    </svg>
-  </div>
+  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
+    <polygon points="0,0 200,0 200,10" class="__gray"></polygon>
+  </svg>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">

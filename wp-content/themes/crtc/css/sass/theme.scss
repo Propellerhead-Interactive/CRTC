@@ -883,6 +883,16 @@ form.register-form {
 	.footer li > a > img {
 		max-width: 200px !important;
 	}
+
+	.section.main-speakers img {
+		max-height: 200px !important;
+		max-width: 200px !important;
+	}
+
+	.section.the-experts img {
+		max-height: 150px !important;
+		max-width: 150px !important;
+	}
 }
 
 @media (max-width: 767px) {
@@ -913,6 +923,16 @@ form.register-form {
 			margin: 0;
 			display: inline;
 		}
+	}
+
+	.section.main-speakers img {
+		max-height: 250px;
+		max-width: 250px;
+	}
+
+	.section.the-experts img {
+		max-height: 200px;
+		max-width: 200px;
 	}
 
 	iframe {

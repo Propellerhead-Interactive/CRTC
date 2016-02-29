@@ -807,6 +807,16 @@ form.register-form :-moz-placeholder {
   .footer li > a > img {
     max-width: 200px !important;
   }
+
+  .section.main-speakers img {
+    max-height: 200px !important;
+    max-width: 200px !important;
+  }
+
+  .section.the-experts img {
+    max-height: 150px !important;
+    max-width: 150px !important;
+  }
 }
 @media (max-width: 767px) {
   h1, .hero h1, #countdown-to-event > div .h1 {
@@ -838,6 +848,16 @@ form.register-form :-moz-placeholder {
     max-height: 50px;
     margin: 0;
     display: inline;
+  }
+
+  .section.main-speakers img {
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  .section.the-experts img {
+    max-height: 200px;
+    max-width: 200px;
   }
 
   iframe {

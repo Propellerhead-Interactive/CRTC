@@ -45,7 +45,7 @@ get_header(); ?>
 	
 <div class="section __white the-experts">
   <div class="svg-container" style="width: 100%; position:relative;">
-    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
       <polygon points="0,0 200,0 200,10" class="__gray"></polygon>
     </svg>
   </div>
@@ -62,7 +62,7 @@ get_header(); ?>
 </div>
 
 <div class="section __blue agenda">
-    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
     <polygon points="0,0 200,0 200,10" class="__white"></polygon>
     <polygon points="200,5 200,10 100,10" class="__pink"></polygon>
     <polygon points="0,0 0,11 200,10" class="__blue"></polygon>
@@ -73,7 +73,7 @@ get_header(); ?>
 </div>
 
 <div class="section __green">
-    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+    <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
     <polygon points="0,0 200,0 0,10" class="__blue"></polygon>
   </svg>
   <div class="container">
@@ -84,7 +84,7 @@ get_header(); ?>
 </div>	
 	
 <div class="section __white blog-posts">
-  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin meet">
+  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
     <polygon points="0,0 100,0 0,5" class="__teal"></polygon>
     <polygon points="-1,0 200,-1 200,10" class="__green"></polygon>
   </svg>

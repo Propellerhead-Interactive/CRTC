@@ -556,7 +556,9 @@ form.register-form {
 	}
 
 	&.social-pink {
-		background-position: 5px 15px;
+		a {
+			background-position: 5px 15px;
+		}
 		&.social-twitter a{
 			background-image: url('../img/twitter-icon-pink.png');
 		}

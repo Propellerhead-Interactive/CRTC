@@ -483,7 +483,7 @@ form.register-form :-moz-placeholder {
   color: transparent;
   background-repeat: no-repeat !important;
 }
-.social-icon.social-pink {
+.social-icon.social-pink a {
   background-position: 5px 15px;
 }
 .social-icon.social-pink.social-twitter a {

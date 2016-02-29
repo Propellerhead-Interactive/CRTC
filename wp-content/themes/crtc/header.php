@@ -25,6 +25,13 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
   <!-- Custom styles for this template -->
   <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/theme.css" rel="stylesheet">
+  <!--[if lte IE 9]>
+    <style type="text/css">
+      svg {
+        display: none !important;
+      }
+    </style>
+  <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>

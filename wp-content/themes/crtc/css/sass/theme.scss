@@ -257,7 +257,8 @@ a {
 .section {
 	position: relative;
 	> div {
-		padding: 50px auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	.speaker-name {

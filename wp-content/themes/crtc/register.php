@@ -23,9 +23,9 @@ get_header(); ?>
 	      </div>
 	    </div>
 	  </div>
-	  <svg viewBox="0 0 100 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
-	    <polygon points="0,0 0,10 100,10" class="__blue"></polygon>
-	    <polygon points="-1,-0.1 -1,7 40,4" class="__pink"></polygon>
+	  <svg viewBox="0 0 200 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
+	    <polygon points="0,0 0,10 200,10" class="__blue"></polygon>
+	    <polygon points="-1,-0.1 -1,7 80,4" class="__pink"></polygon>
 	  </svg>
 	</div>
 	<div class="section __blue agenda">

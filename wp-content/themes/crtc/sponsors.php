@@ -33,8 +33,8 @@ get_header(); ?>
 	      </div>
 	    </div>
 	  </div>
-	  <svg viewBox="0 0 100 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
-	    <polygon points="100,0 0,10 100,10" class="__white"></polygon>
+	  <svg viewBox="0 0 200 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
+	    <polygon points="200,0 0,10 200,10" class="__white"></polygon>
 	  </svg>
 	</div>
 

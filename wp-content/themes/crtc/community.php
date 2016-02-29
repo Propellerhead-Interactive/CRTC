@@ -24,9 +24,9 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <svg viewBox="0 0 100 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
-    <polygon points="0,0 0,10 100,10" class="__gray"></polygon>
-    <polygon points="-1,-0.1 -1,7 40,4" class="__green"></polygon>
+  <svg viewBox="0 0 200 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
+    <polygon points="0,0 0,10 200,10" class="__gray"></polygon>
+    <polygon points="-1,-0.1 -1,7 80,4" class="__green"></polygon>
   </svg>
 </div>
 
@@ -84,8 +84,8 @@ get_header(); ?>
   </div>
 </div>
 <div class="section __green">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="0,0 100,0 0,10" class="__gray"></polygon>
+  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
+    <polygon points="0,0 200,0 0,10" class="__gray"></polygon>
   </svg>
   <div class="container">
     <div class="row">
@@ -95,9 +95,9 @@ get_header(); ?>
 </div>  
 
 <div class="section __white blog-posts">
-  <svg viewBox="0 0 100 10" class="svg-top">
-    <polygon points="100,0 100,7 50,0" class="__teal"></polygon>
-    <polygon points="-1,0 100,-0.02 -1,10" class="__green"></polygon>
+  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
+    <polygon points="200,0 200,7 100,0" class="__teal"></polygon>
+    <polygon points="-1,0 200,-0.02 -1,10" class="__green"></polygon>
   </svg>
   <div class="container">
     <div class="row">

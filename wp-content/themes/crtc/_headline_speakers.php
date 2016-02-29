@@ -32,7 +32,7 @@
         <p><?php the_post_thumbnail(array(265,265));?></p>
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
-        <?php the_content(); ?>
+        <?php the_field("about"); ?>
         <p><a href="<?php the_permalink(); ?>">View more about this speaker</a></p>
       </div>
     </div>

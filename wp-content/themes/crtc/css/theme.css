@@ -358,6 +358,8 @@ a:hover {
 .svg-bottom {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   margin-bottom: -1px;
 }
 

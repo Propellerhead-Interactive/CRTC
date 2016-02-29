@@ -7,7 +7,6 @@ $teal: #00a59b;
 $gray: #eeefef;
 $grayer: #adadad;
 
-
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
@@ -865,6 +864,10 @@ form.register-form {
 		margin-top: 15px;
 	}
 
+	.footer li > a > img {
+		max-width: 400px !important;
+	}
+
 	h1, .hero h1, #countdown-to-event > div .h1{
 		font-size: 45px;
 	}
@@ -874,6 +877,10 @@ form.register-form {
 	.navbar-brand img {
 		width: 42%;
 		margin-top: 25px;
+	}
+
+	.footer li > a > img {
+		max-width: 200px !important;
 	}
 }
 
@@ -887,6 +894,13 @@ form.register-form {
 		margin-right: 0;
 	}
 
+	.footer .nav, .navbar-collapse .nav {
+		text-align: center !important;
+	}
+	.social-icon {
+		display: inline-block !important;
+	}
+
 	.navbar {
 		min-height: 80px;
 	}
@@ -898,6 +912,11 @@ form.register-form {
 			margin: 0;
 			display: inline;
 		}
+	}
+
+	iframe {
+		width: 100%;
+		height: 200px;
 	}
 }
 

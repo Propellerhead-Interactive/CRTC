@@ -789,6 +789,10 @@ form.register-form :-moz-placeholder {
     margin-top: 15px;
   }
 
+  .footer li > a > img {
+    max-width: 400px !important;
+  }
+
   h1, .hero h1, #countdown-to-event > div .h1 {
     font-size: 45px;
   }
@@ -797,6 +801,10 @@ form.register-form :-moz-placeholder {
   .navbar-brand img {
     width: 42%;
     margin-top: 25px;
+  }
+
+  .footer li > a > img {
+    max-width: 200px !important;
   }
 }
 @media (max-width: 767px) {
@@ -807,6 +815,14 @@ form.register-form :-moz-placeholder {
   #countdown-to-event > div:first-child {
     display: block;
     margin-right: 0;
+  }
+
+  .footer .nav, .navbar-collapse .nav {
+    text-align: center !important;
+  }
+
+  .social-icon {
+    display: inline-block !important;
   }
 
   .navbar {
@@ -821,6 +837,11 @@ form.register-form :-moz-placeholder {
     max-height: 50px;
     margin: 0;
     display: inline;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
   }
 }
 @media (max-width: 399px) {

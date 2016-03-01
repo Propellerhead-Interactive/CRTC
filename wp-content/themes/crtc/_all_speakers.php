@@ -12,7 +12,7 @@
 	        <p><a href="<?php the_permalink();?>" title="<?php the_title();?>" class="arrow-button">Read the full bio here</a></p>
 	      </div>
 	              <?php
-	              if($i == 3 || $i == 6 ){
+	              if($i == 4  ){
 	                echo '</div><div class="row">';
 	              } 
 	            $i++;

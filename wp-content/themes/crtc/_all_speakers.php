@@ -1,7 +1,11 @@
 		<div class="row">
 		<?php
+		 if( $wp_query->have_posts() ) {
 		  $i = 1;
-			foreach (get_field('speakers') as $post) : setup_postdata($post); 
+     
+        
+         while ( get_field('speakers') as $post ) : setup_postdata( $post ); ?>
+			
 			?>
 			
 				<div class="col-sm-3 col-xs-12 text-center">
@@ -14,8 +18,7 @@
 	              <?php
 	              if($i == 3 || $i == 6 ){
 	                echo '</div><div class="row">';
-	              } ?>
-	         <?php
+	              } 
 	            $i++;
 	            endwhile;
 	          }

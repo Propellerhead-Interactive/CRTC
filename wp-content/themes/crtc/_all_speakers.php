@@ -1,13 +1,9 @@
 		<div class="row">
 		<?php
-		 if( $wp_query->have_posts() ) {
 		  $i = 1;
      
-        
-         while ( get_field('speakers') as $post ) : setup_postdata( $post ); ?>
-			
+			foreach (get_field('speakers') as $post) : setup_postdata($post); 
 			?>
-			
 				<div class="col-sm-3 col-xs-12 text-center">
 	        <p><?php the_post_thumbnail(array(200, 200));?></p>
 	        <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
@@ -20,11 +16,7 @@
 	                echo '</div><div class="row">';
 	              } 
 	            $i++;
-	            endwhile;
-	          }
 	      ?>
-				
 		  <?php endforeach; 
-		
-		wp_reset_postdata();		?>
+			wp_reset_postdata();		?>
 		</div>

@@ -1,6 +1,6 @@
 <div class="col-sm-9">
   <h1>WHAT DOES <br />#DISCOVERABILITY <br />MEAN TO YOU?</h1>
-  <?php echo do_shortcode("[instagram-feed]");?>
+  <?php echo do_shortcode(get_field("instagram"));?>
 </div>
 <div class="col-sm-3">
 	<a class="twitter-timeline" href="https://twitter.com/hashtag/discoverability" data-widget-id="658720264046252036">#discoverability Tweets</a>

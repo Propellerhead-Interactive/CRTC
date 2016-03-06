@@ -7,7 +7,19 @@
 	      $('#slant-footer').find('polygon').addClass(classList[i]);
 	    }
 		}
+		if($('#countdown-to-event-fr')){
+			$('#countdown-to-event-fr').countdown('2016/05/10', function(event) {
+			  $(this).html(event.strftime('%D %H:%M:%S'));
 
+			  $(this).html("<div><p class='h1'>" + event.strftime('%D') + "</p><small>JOURS</small></div>" +
+			               "<div><p class='h1'>" + event.strftime('%H') + "</p><small>HEURES</small></div>" +
+			               "<div><p class='h1'> &nbsp;:&nbsp; </p><small>&nbsp;</small></div>" +
+			               "<div><p class='h1'>" + event.strftime('%M') + "</p><small>MINS</small></div>" +
+			               "<div><p class='h1'> &nbsp;:&nbsp; </p><small>&nbsp;</small></div>" +
+			               "<div><p class='h1'>" + event.strftime('%S') + "</p><small>SECS</small></div>"
+			    );
+			});
+    }
 		if($('#countdown-to-event')){
 			$('#countdown-to-event').countdown('2016/05/10', function(event) {
 			  $(this).html(event.strftime('%D %H:%M:%S'));

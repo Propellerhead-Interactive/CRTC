@@ -2,7 +2,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.roboto-condensed, h1, h2, h3, h4, h5, h6, .section .speaker-name, form.register-form .form-control, #countdown-to-event > div .h1, .control {
+.roboto-condensed, h1, h2, h3, h4, h5, h6, .section .speaker-name, form.register-form .form-control, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1, .control {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -463,16 +463,16 @@ form.register-form :-moz-placeholder {
   color: #d81c5c;
 }
 
-#countdown-to-event {
+#countdown-to-event, #countdown-to-event-fr {
   margin-bottom: 30px;
 }
-#countdown-to-event > div {
+#countdown-to-event > div, #countdown-to-event-fr > div {
   display: inline-block;
 }
-#countdown-to-event > div:first-child {
+#countdown-to-event > div:first-child, #countdown-to-event-fr > div:first-child {
   margin-right: 40px;
 }
-#countdown-to-event > div .h1 {
+#countdown-to-event > div .h1, #countdown-to-event-fr > div .h1 {
   font-size: 72px;
   margin-bottom: 0;
 }

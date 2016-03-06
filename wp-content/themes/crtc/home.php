@@ -108,7 +108,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="col-sm-6 text-center">
-        <h3>RECENT POSTS</h3>
+        <h3><?php  _e("RECENT POSTS");?></h3>
         <div class="row">
         	<div class="col-sm-8 col-sm-offset-2">
         	<?php 

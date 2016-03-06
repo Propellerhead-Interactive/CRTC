@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-12 text-center">
-    <h1>AGENDA</h1>
+    <h1><?php  _e("AGENDA");?></h1>
     	<?php 
 		    if (have_rows('agenda') && have_rows('agenda_day2')):
 		  ?>
 				<div class="day-toggle">
-		      <a href="#" class="btn btn-default active" data-target="#dayone">DAY ONE</a> 
-		      <a href="#" class="btn btn-default" data-target="#daytwo">DAY TWO</a> 
+		      <a href="#" class="btn btn-default active" data-target="#dayone"><?php _e("DAY ONE");?></a> 
+		      <a href="#" class="btn btn-default" data-target="#daytwo"><?php _e("DAY TWO");?></a> 
 		    </div>
 		  <?php endif; ?>
   </div>
@@ -21,9 +21,9 @@
 				<table id="dayone" class="table agenda-table">
 			    <thead>
 			      <tr>
-			        <th width="20%">TIME SLOT</th>
+			        <th width="20%"><?php _e("TIME SLOT");?></th>
 			        <th></th>
-			        <th>TITLE OF SESSION</th>
+			        <th><?php _e("TITLE OF SESSION");?></th>
 			      </tr>
 			    </thead>
 			    <tbody>
@@ -94,9 +94,9 @@
 				<table id="daytwo" class="table hide agenda-table">
 			    <thead>
 			      <tr>
-			        <th width="20%">TIME SLOT</th>
+			        <th width="20%"><?php _e("TIME SLOT");?>/th>
 			        <th></th>
-			        <th>TITLE OF SESSION</th>
+			        <th><?php _e("TITLE OF SESSION");?></th>
 			      </tr>
 			    </thead>
 			    <tbody>

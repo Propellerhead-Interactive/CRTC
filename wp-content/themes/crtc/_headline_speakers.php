@@ -7,7 +7,7 @@
 		?>
     <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-        <h3>MODERATOR</h3>
+        <h3><?php  _e("MODERATOR");?></h3>
         <p><?php the_post_thumbnail(array(265, 265));?></p>
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
@@ -28,7 +28,7 @@
 		?>
     <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-        <h3>KEYNOTE SPEAKER</h3>
+        <h3><?php  _e("KEYNOTE SPEAKER");?></h3>
         <p><?php the_post_thumbnail(array(265,265));?></p>
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>

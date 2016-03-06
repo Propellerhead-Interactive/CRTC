@@ -12,7 +12,7 @@
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
          <?php the_field("about"); ?>
-        <p><a href="<?php the_permalink(); ?>">View more about this speaker</a></p>
+        <p><a href="<?php the_permalink(); ?>"><?php _e("View more about this speaker");?></a></p>
       </div>
     </div>
 
@@ -33,7 +33,7 @@
         <p class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <p class="muted"><?php the_field("title");?></p>
         <?php the_field("about"); ?>
-        <p><a href="<?php the_permalink(); ?>">View more about this speaker</a></p>
+        <p><a href="<?php the_permalink(); ?>"><?php _e("View more about this speaker");?></a></p>
       </div>
     </div>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>

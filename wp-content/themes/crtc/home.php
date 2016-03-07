@@ -119,7 +119,7 @@ get_header(); ?>
 								<div class="blog-post text-left">
 		              <p class="small"><?php echo mysql2date('j M Y', $recent["post_date"]); ?></p>
 		              <p class="post-title"><a href="<?php echo get_permalink($recent["ID"]); ?>"><?php echo $recent["post_title"]; ?></a></p>
-		              <p><a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-default btn-pink btn-sm">READ MORE</a></p>
+		              <p><a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-default btn-pink btn-sm"><?php _e("READ MORE");?></a></p>
 		            </div>
 					<?php } ?>
           </div>

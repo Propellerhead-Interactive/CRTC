@@ -413,7 +413,7 @@ function display_sb_instagram_feed($atts, $content = null) {
     $sb_instagram_content .= '>';
 
     //Load More button
-    if( $sb_instagram_show_btn ) $sb_instagram_content .= '<a class="sbi_load_btn" href="javascript:void(0);" '.$sb_instagram_button_styles.'><span class="sbi_btn_text">'.$atts['buttontext'].'</span><span class="fa fa-spinner fa-pulse"></span></a>';
+    if( $sb_instagram_show_btn ) $sb_instagram_content .= '<a class="sbi_load_btn" href="javascript:void(0);" '.$sb_instagram_button_styles.'><span class="sbi_btn_text">'._e("LOAD MORE").'</span><span class="fa fa-spinner fa-pulse"></span></a>';
 
     //Follow button
     if( $sb_instagram_show_follow_btn && $sb_instagram_type == 'user' ) $sb_instagram_content .= $sb_instagram_follow_btn_html;

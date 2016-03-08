@@ -29,12 +29,13 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <?php if(get_field("show_event_details")==true):?>
+  
   <svg viewBox="0 0 200 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
     <polygon points="0,0 0,10 200,10" class="__gray"></polygon>
   </svg>
 </div>
 
-<?php if(get_field("show_event_details")==true):?>
 
 <!-- SPEAKERS : MODERATOR/KEYNOTE -->
 <div class="section __gray main-speakers">

@@ -34,6 +34,8 @@ get_header(); ?>
   </svg>
 </div>
 
+<?php if(get_field("show_event_details")==true):?>
+
 <!-- SPEAKERS : MODERATOR/KEYNOTE -->
 <div class="section __gray main-speakers">
   <div class="container">
@@ -69,6 +71,8 @@ get_header(); ?>
     <?php include("_session_schedule.php");?>
   </div>
 </div>
+
+<?php endif;?>
 
 <div class="section __green">
     <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">

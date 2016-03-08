@@ -54,7 +54,7 @@
 						<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             
           <?php else: ?>
-            <img src="/wp-content/uploads/2016/03/discoverability-fr.png"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <img src="/wp-content/uploads/2016/03/disc_summit_logo_fr.png"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             <?php endif; ?>
 					</a>
         </div>

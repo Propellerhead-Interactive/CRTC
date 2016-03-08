@@ -49,7 +49,13 @@
             <span class="icon-bar"></span>
           </button>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand">
+            <?php if(ICL_LANGUAGE_CODE=='en'): ?>
+            
 						<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            
+          <?php else: ?>
+            <img src="/wp-content/uploads/2016/03/discoverability-fr.png"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            <?php endif; ?>
 					</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">

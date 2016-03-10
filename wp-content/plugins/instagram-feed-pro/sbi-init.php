@@ -412,7 +412,6 @@ function display_sb_instagram_feed($atts, $content = null) {
     if($sb_instagram_image_padding == 0 || !isset($sb_instagram_image_padding)) $sb_instagram_content .= ' style="padding-top: 5px"';
     $sb_instagram_content .= '>';
 
-    //Load More button
     if( $sb_instagram_show_btn ) $sb_instagram_content .= '<a class="sbi_load_btn" href="javascript:void(0);" '.$sb_instagram_button_styles.'><span class="sbi_btn_text">'.$atts['buttontext'].'</span><span class="fa fa-spinner fa-pulse"></span></a>';
 
     //Follow button

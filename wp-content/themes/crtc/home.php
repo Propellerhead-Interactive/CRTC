@@ -95,7 +95,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-sm-6 text-center">
-        <h3>EDITOR'S PICK</h3>
+        <h3><?php _e("EDITOR'S PICK");?></h3>
 				<?php $post = get_field("featured_post"); 
 					global $post;
 					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post'); 
@@ -118,7 +118,7 @@ get_header(); ?>
         <div class="row">
         	<div class="col-sm-8 col-sm-offset-2">
         	<?php 
-						$args = array( 'numberposts' => '3' );
+						$args = array( 'numberposts' => '3','orderby' => 'post_date', ,'suppress_filters' => 0 );
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach( $recent_posts as $recent ){ 
 					?>

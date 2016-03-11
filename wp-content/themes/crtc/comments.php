@@ -71,6 +71,8 @@ if ( post_password_required() ) {
 
 	<?php
 		comment_form( array(
+			'must_log_in' => __('<p class="must-log-in">' .  sprintf( __( 'Please log in above to submit a comment.' ), 
+			wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>' . do_action('oa_social_login') , 'theme-text-domain'),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
 		) );

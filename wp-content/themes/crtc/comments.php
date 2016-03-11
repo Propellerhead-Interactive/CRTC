@@ -77,6 +77,7 @@ if ( post_password_required() ) {
 			'title_reply_after'  => '</h2>',
 			'title_reply'    => __( 'Leave a comment', 'crtc' ),
 			'label_submit' => __( 'Submit', 'crtc' ),
+			'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'crtc' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
 			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'crtc' ) . '</label><textarea style="width:100%" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 		) );
 	?>

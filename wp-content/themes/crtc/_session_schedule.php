@@ -94,7 +94,7 @@
 				<table id="daytwo" class="table hide agenda-table">
 			    <thead>
 			      <tr>
-			        <th width="20%"><?php _e("TIME SLOT");?>/th>
+			        <th width="20%"><?php _e("TIME SLOT");?></th>
 			        <th></th>
 			        <th><?php _e("TITLE OF SESSION");?></th>
 			      </tr>

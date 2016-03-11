@@ -28,7 +28,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer hide">
 		<?php twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(

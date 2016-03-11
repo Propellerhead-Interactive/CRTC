@@ -13,7 +13,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-				<?php the_title( '<h1>', '</h1>' ); ?>        
+				<?php the_title( '<h1 style="padding: 10px; background-color: rgba(0,0,0,0.75);">', '</h1>' ); ?>        
       </div>
     </div>
   </div>

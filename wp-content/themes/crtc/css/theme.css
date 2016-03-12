@@ -508,6 +508,25 @@ form.register-form :-moz-placeholder {
   background-image: url("../img/ig-icon-white.png");
 }
 
+.sbi_load_btn {
+  border-radius: 0 !important;
+  padding: 3px 12px !important;
+  letter-spacing: 0.25em;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  border: 2px solid #d81c5c !important;
+}
+.sbi_load_btn:hover {
+  color: #d81c5c !important;
+  background-color: #FFF !important;
+  opacity: 1 !important;
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.

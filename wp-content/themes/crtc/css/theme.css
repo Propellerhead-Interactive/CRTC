@@ -162,6 +162,9 @@ a:hover {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+.hero iframe {
+  width: 100%;
+}
 .hero .container {
   position: relative;
   top: 50%;
@@ -840,6 +843,18 @@ form.register-form :-moz-placeholder {
 @media (max-width: 767px) {
   h1, .hero h1, #countdown-to-event > div .h1 {
     font-size: 35px;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .hero .container {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 
   #countdown-to-event > div:first-child {

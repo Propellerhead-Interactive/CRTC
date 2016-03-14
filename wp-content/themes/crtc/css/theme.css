@@ -856,6 +856,9 @@ form.register-form :-moz-placeholder {
     -ms-transform: none;
     transform: none;
   }
+  .hero.mini-hero {
+    height: auto !important;
+  }
 
   #countdown-to-event > div:first-child {
     display: block;

@@ -934,6 +934,9 @@ form.register-form {
 		  -ms-transform: none;
 		  transform: none;
 		}
+		&.mini-hero {
+			height: auto !important;
+		}
 	}
 
 	#countdown-to-event > div:first-child {

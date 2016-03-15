@@ -537,7 +537,7 @@ form.register-form {
 	}
 }
 
-#countdown-to-event,#countdown-to-event-fr  {
+#countdown-to-event, #countdown-to-event-fr  {
 	margin-bottom: 30px;
 	> div {
 		display: inline-block;
@@ -893,7 +893,7 @@ form.register-form {
 		max-width: 400px !important;
 	}
 
-	h1, .hero h1, #countdown-to-event > div .h1{
+	h1, .hero h1, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1 {
 		font-size: 45px;
 	}
 }

@@ -59,7 +59,15 @@
             <?php endif; ?>
 					</a>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
+          <?php if (is_user_logged_in()): ?>
+          <ul class="nav navbar-nav navbar-right logout-button">
+            <li>
+              <a class="btn btn-default btn-pink btn-sm" href="<?php echo wp_logout_url( home_url() ); ?>"><?php _e("Logout");?></a>
+            </li>
+          </ul>
+          <?php endif; ?>
         	<?php
 						wp_nav_menu( array(
 							'theme_location' => 'primary',
@@ -72,8 +80,8 @@
               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
               'walker'            => new wp_bootstrap_navwalker()
 						 ) );
-					?><a href="<?php echo wp_logout_url( home_url() ); ?>"><?php _e("Logout");?></a>
-         
+					?>
+
 					<div class="clearfix"></div> 
         	<?php
 						wp_nav_menu( array(

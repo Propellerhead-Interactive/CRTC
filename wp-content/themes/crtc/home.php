@@ -62,6 +62,8 @@ get_header(); ?>
     </div>
   </div>
 </div>
+<?php endif;?>
+
 
 <div class="section __blue agenda">
     <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
@@ -74,7 +76,7 @@ get_header(); ?>
   </div>
 </div>
 
-<?php endif;?>
+
 
 <div class="section __green">
     <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">

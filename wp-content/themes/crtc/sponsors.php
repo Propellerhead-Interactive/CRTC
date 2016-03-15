@@ -38,13 +38,5 @@ get_header(); ?>
 	  </svg>
 	</div>
 
-<div class="section __white blog-posts">
-  <div class="container">
-    <div class="row">
-	    <div class="col-sm-12 text-center">
-	    	<?php include("_newsletter.php");?>
-	    </div>
-	  </div>
-  </div>
-</div>
+
 <?php get_footer(); ?>

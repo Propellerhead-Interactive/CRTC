@@ -162,6 +162,9 @@ a:hover {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+.hero iframe {
+  width: 100%;
+}
 .hero .container {
   position: relative;
   top: 50%;
@@ -508,6 +511,25 @@ form.register-form :-moz-placeholder {
   background-image: url("../img/ig-icon-white.png");
 }
 
+.sbi_load_btn {
+  border-radius: 0 !important;
+  padding: 3px 12px !important;
+  letter-spacing: 0.25em;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  border: 2px solid #d81c5c !important;
+}
+.sbi_load_btn:hover {
+  color: #d81c5c !important;
+  background-color: #FFF !important;
+  opacity: 1 !important;
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.
@@ -821,6 +843,21 @@ form.register-form :-moz-placeholder {
 @media (max-width: 767px) {
   h1, .hero h1, #countdown-to-event > div .h1 {
     font-size: 35px;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .hero .container {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .hero.mini-hero {
+    height: auto !important;
   }
 
   #countdown-to-event > div:first-child {

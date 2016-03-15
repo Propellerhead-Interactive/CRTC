@@ -120,7 +120,7 @@ get_header(); ?>
         <div class="row">
         	<div class="col-sm-8 col-sm-offset-2">
         	<?php 
-						$args = array( 'numberposts' => '3','orderby' => 'post_date' ,'suppress_filters' => 0 );
+						$args = array( 'numberposts' => '3','orderby' => 'post_date', 'post_status'=>'publish' ,'suppress_filters' => 0 );
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach( $recent_posts as $recent ){ 
 					?>

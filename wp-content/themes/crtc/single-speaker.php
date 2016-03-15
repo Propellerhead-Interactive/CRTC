@@ -40,7 +40,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="col-sm-3 text-center">
 						<p><?php the_post_thumbnail(array(265, 265));?></p>
-						<p><em><?php the_field("title");?></em></p>
+						<p><?php the_field("title");?></p>
 		    		<p><?php the_field("about");?></p>
 					</div>
 					<div class="col-sm-9">

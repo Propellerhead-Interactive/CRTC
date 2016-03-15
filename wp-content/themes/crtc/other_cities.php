@@ -35,12 +35,12 @@ get_header(); ?>
     </div>
   </div>
   <svg viewBox="0 0 100 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
-    <polygon points="0,0 0,10 200,10" class="__white"></polygon>
-    <polygon points="-1,-0.1 -1,7 80,4" class="__green"></polygon>
+    <!--polygon points="0,0 0,10 200,10" class="__white"></polygon-->
+    <!--polygon points="-1,-0.1 -1,7 80,4" class="__green"></polygon-->
   </svg>
 </div>
 
-<div class="section __white">
+<!--div class="section __white">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -48,7 +48,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-</div>
+</div-->
 
 <div class="section __green">
   <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
@@ -90,7 +90,7 @@ get_header(); ?>
   </div>
 </div>
 	
-<div class="section __blue agenda">
+<!--div class="section __blue agenda">
   <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
     <polygon points="0,0 200,0 200,10" class="__white"></polygon>
     <polygon points="200,5 200,10 100,10" class="__pink"></polygon>
@@ -99,6 +99,6 @@ get_header(); ?>
   <div class="container">
     <?php include("_session_schedule.php");?>
   </div>
-</div>	
+</div-->	
 
 <?php get_footer(); ?>

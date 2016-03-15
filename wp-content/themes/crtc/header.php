@@ -72,8 +72,9 @@
               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
               'walker'            => new wp_bootstrap_navwalker()
 						 ) );
-					?>
-					<div class="clearfix"></div>
+					?><a href="<?php echo wp_logout_url( home_url() ); ?>"><?php _e("Logout");?></a>
+         
+					<div class="clearfix"></div> 
         	<?php
 						wp_nav_menu( array(
 							'menu'              => 'Top',

@@ -609,6 +609,18 @@ form.register-form {
 	}
 }
 
+.logout-button {
+	margin-left: 20px;
+	margin-top: 9px;
+	a {
+		color: #FFF !important;
+		&:hover, &:focus, &:active {
+			color: $pink !important;
+			text-decoration: none !important;
+		}
+	}
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.
@@ -920,6 +932,10 @@ form.register-form {
 }
 
 @media (max-width: 767px) {
+	.logout-button {
+		margin-left: 0;
+	}
+
 	h1, .hero h1, #countdown-to-event > div .h1{
 		font-size: 35px;
 	}

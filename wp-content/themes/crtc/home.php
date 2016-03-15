@@ -29,12 +29,15 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <?php if(get_field("show_event_details")==true):?>
+  
   
   <svg viewBox="0 0 200 10" class="svg-bottom" preserveAspectRatio="xMaxYMax meet">
-    <polygon points="0,0 0,10 200,10" class="__gray"></polygon>
+    <?php if(get_field("show_event_details")==true):?>
+      <polygon points="0,0 0,10 200,10" class="__gray"></polygon>
+    <?php else:?>
+      <polygon points="0,0 0,10 200,10" class="__white"></polygon>
+    <?php endif;?>
   </svg>
-<?php endif;?>
 </div>
 
 <?php if(get_field("show_event_details")==true):?>

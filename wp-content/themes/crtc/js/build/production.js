@@ -1745,6 +1745,12 @@ $(document)
 (function(){
 	$(document).ready(function(){
 		var classList = $('#slant-footer').prev()[0].className.split(/\s+/);
+
+		$('nav [title]').each( function() {
+	    var $this = $(this);
+	    $this.data('title',$this.attr('title'));
+	    $this.removeAttr('title');
+		});
 		
 		for (var i = 0; i < classList.length; i++) {
 	    if (classList[i].indexOf('__') !== -1) {

@@ -208,6 +208,11 @@ a {
 
 	.container {
 	  @include vertical-align();
+	  z-index: 2;
+	}
+
+	svg {
+		z-index: 1;
 	}
 
 	&.mini-hero {

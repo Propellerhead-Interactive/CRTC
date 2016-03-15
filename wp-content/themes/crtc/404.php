@@ -8,7 +8,9 @@
  */
 
 get_header(); ?>
-
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php _e("404 Error");?></h1>
@@ -22,5 +24,5 @@ get_header(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
-
+</div></div></div>
 <?php get_footer(); ?>

@@ -70,12 +70,17 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php
+  $leave_comment_title = '';
+  if(is_user_logged_in ()){
+    $leave_comment_title = 'Leave a comment';
+  }
+  
 		comment_form( array(
 			'must_log_in' => __('<p class="must-log-in">' .  sprintf( __( 'Please log in above to submit a comment.', 'crtc' ), 
 			wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>' . do_action('oa_social_login') , 'theme-text-domain'),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
-			'title_reply'    => __( 'Leave a comment', 'crtc' ),
+			'title_reply'    => __( $leave_comment_title, 'crtc' ),
 			'label_submit' => __( 'Submit', 'crtc' ),
 			'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'crtc' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
 			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'crtc' ) . '</label><textarea style="width:100%" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'

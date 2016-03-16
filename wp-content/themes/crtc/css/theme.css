@@ -842,7 +842,7 @@ form.register-form :-moz-placeholder {
 }
 @media (max-width: 991px) {
   .navbar-brand img {
-    width: 42%;
+    width: 63%;
     margin-top: 25px;
   }
 

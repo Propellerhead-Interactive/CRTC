@@ -1,4 +1,3 @@
-		<div class="row">
 		<?php
 		  $i = 1;
      
@@ -19,4 +18,3 @@
 	      ?>
 		  <?php endforeach; 
 			wp_reset_postdata();		?>
-		</div>

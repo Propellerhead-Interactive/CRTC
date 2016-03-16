@@ -861,7 +861,7 @@ form.register-form :-moz-placeholder {
     margin-left: 0;
   }
 
-  h1, .hero h1, #countdown-to-event > div .h1 {
+  h1, .hero h1, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1 {
     font-size: 35px;
   }
 
@@ -880,7 +880,7 @@ form.register-form :-moz-placeholder {
     height: auto !important;
   }
 
-  #countdown-to-event > div:first-child {
+  #countdown-to-event > div:first-child, #countdown-to-event-fr > div:first-child {
     display: block;
     margin-right: 0;
   }

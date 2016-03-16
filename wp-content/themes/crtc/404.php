@@ -20,7 +20,6 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php _e( 'Don\'t worry! You can always: <A href="http://discoverability.ca">go to homepage</a>', 'twentysixteen' ); ?></p>
 
-					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

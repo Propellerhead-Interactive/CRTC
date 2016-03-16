@@ -922,7 +922,7 @@ form.register-form {
 	}
 
 	.footer li > a > img {
-		max-width: 200px !important;
+		max-width: 300px !important;
 	}
 
 	.section.main-speakers img {
@@ -939,9 +939,10 @@ form.register-form {
 @media (max-width: 767px) {
 	.logout-button {
 		margin-left: 0;
+		width: 100% !important;
 	}
 
-	h1, .hero h1, #countdown-to-event > div .h1{
+	h1, .hero h1, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1{
 		font-size: 35px;
 	}
 
@@ -960,7 +961,7 @@ form.register-form {
 		}
 	}
 
-	#countdown-to-event > div:first-child {
+	#countdown-to-event > div:first-child, #countdown-to-event-fr > div:first-child {
 		display: block;
 		margin-right: 0;
 	}

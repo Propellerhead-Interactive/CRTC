@@ -84,6 +84,11 @@ a:hover {
   border: 2px solid #d81c5c;
 }
 
+.form-control.black-outline {
+  border-radius: 0;
+  border: 2px solid #000;
+}
+
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus {
   background-color: transparent;
   color: #333;

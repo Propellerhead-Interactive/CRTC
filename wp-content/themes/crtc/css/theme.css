@@ -546,6 +546,10 @@ form.register-form :-moz-placeholder {
   text-decoration: none !important;
 }
 
+.menu-item-language-current {
+  display: none !important;
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.

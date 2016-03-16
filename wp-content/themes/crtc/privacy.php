@@ -55,12 +55,6 @@ get_header(); ?>
 	</div>
 </div>
 	
-<div class="section __white">
-  <svg viewBox="0 0 200 10" class="svg-top" preserveAspectRatio="xMinYMin slice">
-    <polygon points="200,0 0,0 200,10" class="__gray"></polygon>
-  </svg>
-
-</div>
 
 
 <?php get_footer(); ?>

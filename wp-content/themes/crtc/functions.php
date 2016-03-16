@@ -522,3 +522,5 @@ function posts_link_attributes() {
 
 require_once('wp_bootstrap_navwalker.php');
 
+
+

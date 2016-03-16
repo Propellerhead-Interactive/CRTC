@@ -110,7 +110,7 @@ get_header(); ?>
             <div class="card">
               <div class="card-image" style="background-image: url('<?php echo $thumb[0];?>');"></div>
               <div class="card-content">
-                <p class="small"><?php echo date_i18n(get_option( 'date_format' ), strtotime($post->post_date)); ?></p>
+                <p class="small"><?php echo mysql2date('j M Y', $recent["post_date"]); ?></p>
                 <p class="post-title"><a href="<?php echo get_permalink($post); ?>"><?php echo $post->post_title; ?></a></p>
                 <p class="post-excerpt"><?php echo $post->post_excerpt; ?></p>
               </div>
@@ -128,7 +128,7 @@ get_header(); ?>
 							foreach( $recent_posts as $recent ){ 
 					?>
 								<div class="blog-post text-left">
-		              <p class="small"><?php echo date_i18n('j M Y', $recent["post_date"]); ?></p>
+		              <p class="small"><?php echo mysql2date('j M Y', $recent["post_date"]); ?></p>
 		              <p class="post-title"><a href="<?php echo get_permalink($recent["ID"]); ?>"><?php echo $recent["post_title"]; ?></a></p>
 		              <!--p><a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-default btn-pink btn-sm"><?php _e("READ MORE");?></a></p-->
 		            </div>

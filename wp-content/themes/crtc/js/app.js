@@ -8,7 +8,7 @@
 	    $this.removeAttr('title');
 		});
 
-		$('.canada-logo').removeAttr('href').css({"cursor": "default"});
+		$('.canada-logo a').removeAttr('href').css({"cursor": "default"});
 		
 		for (var i = 0; i < classList.length; i++) {
 	    if (classList[i].indexOf('__') !== -1) {

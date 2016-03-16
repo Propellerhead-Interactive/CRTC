@@ -546,6 +546,10 @@ form.register-form :-moz-placeholder {
   text-decoration: none !important;
 }
 
+.menu-item-language-current {
+  display: none !important;
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.
@@ -838,7 +842,7 @@ form.register-form :-moz-placeholder {
 }
 @media (max-width: 991px) {
   .navbar-brand img {
-    width: 42%;
+    width: 63%;
     margin-top: 25px;
   }
 

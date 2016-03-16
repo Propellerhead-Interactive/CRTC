@@ -626,6 +626,10 @@ form.register-form {
 	}
 }
 
+.menu-item-language-current {
+	display: none !important;
+}
+
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.
@@ -917,7 +921,7 @@ form.register-form {
 
 @media (max-width: 991px) {
 	.navbar-brand img {
-		width: 42%;
+		width: 63%;
 		margin-top: 25px;
 	}
 

@@ -7,6 +7,8 @@
 	    $this.data('title',$this.attr('title'));
 	    $this.removeAttr('title');
 		});
+
+		$('.canada-logo').removeAttr('href').css({"cursor": "default"});
 		
 		for (var i = 0; i < classList.length; i++) {
 	    if (classList[i].indexOf('__') !== -1) {

@@ -76,7 +76,7 @@
               'container'         => '',
               'container_id' 			=> '',
               'container_class'   => '',
-              'menu_class'        => 'nav navbar-nav navbar-nav-small navbar-right',
+              'menu_class'        => 'nav navbar-nav navbar-nav-small navbar-right hidden-xs',
               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
               'walker'            => new wp_bootstrap_navwalker()
 						 ) );
@@ -96,6 +96,21 @@
               'walker'            => new wp_bootstrap_navwalker()
 						 ) );
 					?>
+          <div class="clearfix visible-xs-block"></div> 
+
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'primary',
+              'menu'              => 'Social',
+              'depth'             => 2,
+              'container'         => '',
+              'container_id'      => '',
+              'container_class'   => '',
+              'menu_class'        => 'nav navbar-nav navbar-nav-small navbar-right visible-xs-block',
+              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+              'walker'            => new wp_bootstrap_navwalker()
+             ) );
+          ?>
         </div><!--/.nav-collapse -->
       </div>
     </nav>

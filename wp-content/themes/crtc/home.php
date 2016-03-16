@@ -110,7 +110,7 @@ get_header(); ?>
             <div class="card">
               <div class="card-image" style="background-image: url('<?php echo $thumb[0];?>');"></div>
               <div class="card-content">
-                <p class="small"><?php echo date_i18n('j M Y',$post->post_date); ?></p>
+                <p class="small"><?php echo date_i18n(get_option( 'date_format' ), strtotime($post->post_date)); ?></p>
                 <p class="post-title"><a href="<?php echo get_permalink($post); ?>"><?php echo $post->post_title; ?></a></p>
                 <p class="post-excerpt"><?php echo $post->post_excerpt; ?></p>
               </div>

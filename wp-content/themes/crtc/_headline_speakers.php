@@ -14,9 +14,9 @@
          <?php the_field("about"); ?>
         <p><a href="<?php the_permalink(); ?>"><?php
            if(ICL_LANGUAGE_CODE=='en'){
-             echo "Read ".the_title()."’s biography";
+             echo "Read ".get_the_title()."’s biography";
            }else{
-             echo "Lire la biographie complète de ".the_title();
+             echo "Lire la biographie complète de ".get_the_title();
            }
             ?></a></p>
       </div>
@@ -41,9 +41,9 @@
         <?php the_field("about"); ?>
         <p><a href="<?php the_permalink(); ?>"><?php
            if(ICL_LANGUAGE_CODE=='en'){
-             echo "Read ".the_title()."’s biography";
+             echo "Read ".get_the_title()."’s biography";
            }else{
-             echo "Lire la biographie complète de ".the_title();
+             echo "Lire la biographie complète de ".get_the_title();
            }
             ?></a></p>
       </div>

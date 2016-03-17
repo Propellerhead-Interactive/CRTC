@@ -7,6 +7,10 @@ $teal: #00a59b;
 $gray: #eeefef;
 $grayer: #adadad;
 
+.wpcf7-validation-errors{
+  border: none !important;
+}
+
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;

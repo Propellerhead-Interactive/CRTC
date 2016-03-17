@@ -1,3 +1,7 @@
+.wpcf7-validation-errors {
+  border: none !important;
+}
+
 .roboto, body {
   font-family: 'Roboto', sans-serif;
 }

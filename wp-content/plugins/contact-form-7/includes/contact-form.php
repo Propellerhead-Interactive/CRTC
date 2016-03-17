@@ -387,7 +387,7 @@ class WPCF7_ContactForm {
 			$content = $submission->get_response();
 
 			if ( $submission->is( 'validation_failed' ) ) {
-				$class .= ' wpcf7-validation-errors';
+				//MTK $class .= ' wpcf7-validation-errors';
 			} elseif ( $submission->is( 'spam' ) ) {
 				$class .= ' wpcf7-spam-blocked';
 			} elseif ( $submission->is( 'mail_sent' ) ) {

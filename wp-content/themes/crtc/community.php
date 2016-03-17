@@ -59,7 +59,7 @@ get_header(); ?>
                 <div class="card">
                   <div class="card-image" style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),"medium")[0];?>')"></div>
                   <div class="card-content">
-                    <p class="small"><?php the_time( get_option( 'date_format' ) ); ?></p>
+                    <p class="small"><?php echo mysql2date('j M Y',$post->post_date); ?></p>
                     <p class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                     <p class="post-excerpt"><?php the_excerpt(); ?></p>
                   </div>

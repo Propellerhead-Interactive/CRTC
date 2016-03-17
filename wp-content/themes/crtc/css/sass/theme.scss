@@ -111,6 +111,11 @@ a {
 	border: 2px solid $pink;
 }
 
+.form-control.black-outline{
+	border-radius: 0;
+	border: 2px solid $black;
+}
+
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus {
 	background-color: transparent;
 	color: #333;

@@ -9,7 +9,7 @@
       ?>">
 			<input type="hidden" name="mailingList" value="yes"/>
 			<div class="input-group">
-			  <input type="email" class="form-control __placeholder-pink" name="email" placeholder="<?php  _e("EMAIL ADDRESS");?>">
+			  <input type="email" class="form-control black-outline" name="email" placeholder="<?php  _e("EMAIL ADDRESS");?>">
 			  <span class="input-group-btn">
 			    <button class="btn btn-default btn-pink" type="submit"><?php  _e("SUBMIT");?></button>
 			  </span>

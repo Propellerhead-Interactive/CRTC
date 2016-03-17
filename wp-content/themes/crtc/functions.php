@@ -523,4 +523,13 @@ function posts_link_attributes() {
 require_once('wp_bootstrap_navwalker.php');
 
 
-
+function theme_slug_filter_wp_title( $title ) {
+    if ( is_404() ) {
+        $title = _e('Error 404');
+    }
+    // You can do other filtering here, or
+    // just return $title
+    return $title;
+}
+// Hook into wp_title filter hook
+add_filter( 'wp_title', 'theme_slug_filter_wp_title' );

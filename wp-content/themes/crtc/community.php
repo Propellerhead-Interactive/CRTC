@@ -62,7 +62,7 @@ get_header(); ?>
                     <p class="small"><?php echo mysql2date('j M Y',$post->post_date); ?></p>
                     <p class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                     <p class="post-excerpt">
-                      <?php echo apply_filters('the_excerpt',get_the_excerpt().'<a href="'.get_permalink().'" class="read-more"> '._e( 'Read more').' "</a>'); ?>
+                      <?php echo apply_filters('the_excerpt',get_the_excerpt().'<a href="'.get_permalink().'" class="read-more"> '._e( 'Read more').' </a>'); ?>
                     </p>
                   </div>
                 </div>

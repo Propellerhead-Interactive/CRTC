@@ -449,7 +449,6 @@ form.register-form .form-control {
   border-bottom: 2px solid #000;
   background-color: transparent;
   box-shadow: none;
-  text-transform: uppercase;
   color: #000;
   margin-bottom: 30px;
 }
@@ -876,16 +875,6 @@ form.register-form :-moz-placeholder {
     max-height: 150px !important;
     max-width: 150px !important;
   }
-}
-@media (max-width: 767px) {
-  .logout-button {
-    margin-left: 0;
-    width: 100% !important;
-  }
-
-  h1, .hero h1, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1 {
-    font-size: 35px;
-  }
 
   .hero {
     padding-top: 40px;
@@ -900,6 +889,16 @@ form.register-form :-moz-placeholder {
   }
   .hero.mini-hero {
     height: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .logout-button {
+    margin-left: 0;
+    width: 100% !important;
+  }
+
+  h1, .hero h1, #countdown-to-event > div .h1, #countdown-to-event-fr > div .h1 {
+    font-size: 35px;
   }
 
   #countdown-to-event > div:first-child, #countdown-to-event-fr > div:first-child {

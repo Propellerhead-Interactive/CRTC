@@ -15,7 +15,7 @@ $grayer: #adadad;
   position: absolute;
   text-align: center;
   top: 50px;
-  left: 50%;
+  margin-left: 25%;
 }
 @mixin vertical-align($position: relative) {
   position: $position;

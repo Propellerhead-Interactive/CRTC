@@ -534,10 +534,3 @@ function theme_slug_filter_wp_title( $title ) {
 // Hook into wp_title filter hook
 add_filter( 'wp_title', 'theme_slug_filter_wp_title' );
 
-
-function new_excerpt_more($more) {
-global $post;
-return '… <a href="'. get_permalink($post->ID) . '">' . __('Read More "', 'your-theme-textdomain') . '</a>';
-}
-
-

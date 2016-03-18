@@ -10,7 +10,13 @@ $grayer: #adadad;
 .wpcf7-validation-errors{
   border: none !important;
 }
-
+.wpcf7-response-output {
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 50%;
+}
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;

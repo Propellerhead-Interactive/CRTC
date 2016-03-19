@@ -516,12 +516,9 @@ form.register-form {
 		margin-top: 0;
 	}
 	.form-control {
-		@extend .roboto-condensed;
-		padding-left: 0;
-		letter-spacing: 0.1em;
-		border: 0 none;
-		border-bottom: 2px solid $black;
-		background-color: transparent;
+		padding-left: 10px;
+		border: 2px solid $black;
+		background-color: #FFF;
 		box-shadow: none;
 		color: $black;
 		margin-bottom: 30px;

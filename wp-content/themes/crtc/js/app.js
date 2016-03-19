@@ -52,5 +52,18 @@
 
 			});
 		}
+
+		if($('#commentform')){
+			$('#submit').attr('disabled', 'disabled');
+
+			$('#comment').on('keyup', function(e){
+				if($(this).val().length > 0){
+					$('#submit').removeAttr('disabled');
+				} else {
+					$('#submit').attr('disabled', 'disabled');
+				}
+			});
+		}
+
 	});
 })();
